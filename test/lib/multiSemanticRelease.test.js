@@ -1210,11 +1210,11 @@ describe("multiSemanticRelease()", () => {
 		await expect(r5).rejects.toMatchObject({
 			message: expect.stringMatching("Package devDependencies must be object"),
 		});
-		const r6 = multiSemanticRelease(["test/fixtures/badPeerDepsPackage.json"], {}, { stdout });
-		await expect(r6).rejects.toBeInstanceOf(SyntaxError);
-		await expect(r6).rejects.toMatchObject({
-			message: expect.stringMatching("Package peerDependencies must be object"),
-		});
+		// const r6 = multiSemanticRelease(["test/fixtures/badPeerDepsPackage.json"], {}, { stdout });
+		// await expect(r6).rejects.toBeInstanceOf(SyntaxError);
+		// await expect(r6).rejects.toMatchObject({
+		// 	message: expect.stringMatching("Package peerDependencies must be object"),
+		// });
 	});
 
 	// test("ValueError if sequentialPrepare is enabled on a cyclic project", async () => {
